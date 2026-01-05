@@ -1,0 +1,2 @@
+# Task Lock
+Allows for the user to add custom tasks to a list and roll a random task to complete. Once the task is completed it will be logged with the date it was completed. Also supports backlogging tasks and a custom InfoBox.
