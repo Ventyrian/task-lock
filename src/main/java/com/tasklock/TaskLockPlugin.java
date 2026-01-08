@@ -1,5 +1,6 @@
 package com.tasklock;
 
+import com.google.gson.Gson;
 import com.google.inject.Provides;
 import javax.inject.Inject;
 import javax.swing.SwingUtilities;
@@ -9,6 +10,7 @@ import net.runelite.api.Client;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.events.ConfigChanged;
+import net.runelite.client.game.SpriteManager;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.ClientToolbar;
@@ -35,6 +37,12 @@ public class TaskLockPlugin extends Plugin
     @Inject
     private ConfigManager configManager;
 
+    @Inject
+    private SpriteManager spriteManager;
+
+    @Inject
+    private Gson gson;
+
     private TaskLockPanel panel;
     private NavigationButton navButton;
 
@@ -45,10 +53,10 @@ public class TaskLockPlugin extends Plugin
 	{
 		log.debug("Task Lock started!");
 
-        BufferedImage icon = ImageUtil.loadImageResource(getClass(),"/icon.png");
+        BufferedImage icon = ImageUtil.loadImageResource(getClass(), "/com/tasklock/icon.png");
 
         SwingUtilities.invokeLater( () -> {
-            panel = new TaskLockPanel(configManager);
+            panel = new TaskLockPanel(configManager, gson, spriteManager);
             panel.setupSections();
 
             navButton = NavigationButton.builder()
