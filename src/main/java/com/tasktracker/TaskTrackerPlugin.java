@@ -65,7 +65,7 @@ public class TaskTrackerPlugin extends Plugin
 	@Override
 	protected void startUp() throws Exception
 	{
-		log.debug("Task Lock started!");
+		log.debug("Task Tracker started!");
 
         BufferedImage icon = ImageUtil.loadImageResource(getClass(), "img/icon.png");
 
@@ -74,7 +74,7 @@ public class TaskTrackerPlugin extends Plugin
             panel.setupSections();
 
             navButton = NavigationButton.builder()
-                    .tooltip("Task Lock")
+                    .tooltip("Task Tracker")
                     .icon(icon)
                     .panel(panel)
                     .build();
@@ -89,14 +89,14 @@ public class TaskTrackerPlugin extends Plugin
 	{
         clientToolbar.removeNavigation(navButton);
         audioExecutor.shutdown();
-		log.debug("Task Lock stopped!");
+		log.debug("Task Tracker stopped!");
 	}
 
     @Subscribe
     public void onConfigChanged(ConfigChanged event)
     {
         // Check if the change belongs to your plugin group
-        if (event.getGroup().equals("tasklock"))
+        if (event.getGroup().equals("tasktracker"))
         {
             panel.refresh();
         }
@@ -111,7 +111,7 @@ public class TaskTrackerPlugin extends Plugin
     // Get task data from config
     public TaskTrackerData getTaskData()
     {
-        String json = configManager.getConfiguration("tasklock","allTasksJson");
+        String json = configManager.getConfiguration("tasktracker","allTasksJson");
         if (json == null || json.isEmpty())
         {
             return new TaskTrackerData();
@@ -141,7 +141,7 @@ public class TaskTrackerPlugin extends Plugin
         }
 
         String json = gson.toJson(data);
-        configManager.setConfiguration("tasklock","allTasksJson",json);
+        configManager.setConfiguration("tasktracker","allTasksJson",json);
     }
 
     // Button function roll a unique task, rerolling the same task is impossible

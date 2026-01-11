@@ -36,7 +36,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
 public class TaskTrackerPanel extends PluginPanel
 {
     // Strings used in ListPanels and Headers
@@ -169,7 +168,7 @@ public class TaskTrackerPanel extends PluginPanel
             }
             catch (Exception e)
             {
-                logger.error("Error refreshing TaskLock panel",e);
+                logger.error("Error refreshing TaskTracker panel",e);
             }
 
         });

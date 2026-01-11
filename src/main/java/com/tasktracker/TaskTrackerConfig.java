@@ -35,7 +35,7 @@ public interface TaskTrackerConfig extends Config
 
     @ConfigItem(
             keyName = "currentTaskBorderColor",
-            name = "Current Task Border Color",
+            name = "Border Color",
             description = "The color of the border displayed around the current task in the active tasks list.",
             position = 2
     )
