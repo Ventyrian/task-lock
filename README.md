@@ -15,7 +15,7 @@ These are not case sensitive and some have priority over others
 
 ## Configuration
 
-<img width="351" height="544" alt="image" src="https://github.com/user-attachments/assets/1e5662d5-1cc9-429d-b0a6-cafad1190613" />
+<img width="352" height="584" alt="image" src="https://github.com/user-attachments/assets/62e0890b-27f9-46b6-a710-5877cadefefb" />
 
 - *Enable Sounds* determines if the SFX associated with the Roll, Backlog, and Complete Buttons is played
 - *Enable Backlog* determines if the backlog box and button is displayed
@@ -23,12 +23,13 @@ These are not case sensitive and some have priority over others
 - *Highlight Color* determines the highlight color of the current task within the active task list
 - *Date Format* determines the format of the date and time to be displayed in the *Edit | Details* window of the completed task list
 - *Sort Order* determines the order in which completed tasks are displayed
+- *Show Index Number* determines whether to show the index number next to completed items
 - *Milestone Interval* determines the number of completed tasks required to highlight the next milestone (if set to 0 no milestones will be set)
 - *Milestone Color* determines the color of the highlight a milestone will have
 - *WARNING Section* a warning to remind the user that if the *Reset* button is clicked in the configuration panel all active, backlogged, and completed tasks will be lost
 
 ## UI
-<img width="404" height="1343" alt="image" src="https://github.com/user-attachments/assets/2ca90a55-1a10-4729-b6dd-50ec243bde5f" />
+<img width="352" height="1258" alt="image" src="https://github.com/user-attachments/assets/380aa15d-6594-4201-874a-ba51aac7ed95" />
 
 - The current task along with its associated icon is displayed at the top
 - The roll/reroll, backlog, and complete task buttons are underneath the current task
